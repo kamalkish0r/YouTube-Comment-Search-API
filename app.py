@@ -1,15 +1,14 @@
 from flask import Flask, jsonify, request
 import requests
-import awsgi
 from datetime import datetime
 
 app = Flask(__name__)
 
 yltic_url = 'https://app.ylytic.com/ylytic/test'
 
-
-def lambda_handler(event, context):
-    return awsgi.response(app, event, context, base64_content_types={"image/png"})
+@app.route('/', methods=['GET'])
+def home():
+    return "To filter comments use parameters like : /search?search_author=Fredrick&at_from=01-01-2023&at_to=01-02-2023&like_from=0&like_to=5&reply_from=0&reply_to=5&seach_text=economic"
 
 @app.route('/search', methods=['GET'])
 def search():
