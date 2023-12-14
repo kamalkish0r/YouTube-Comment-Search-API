@@ -64,7 +64,7 @@ This repository hosts a Flask-based API to search and filter YouTube comments ba
 - **Example Usage:**
 
   ```
-  http://localhost:5000/search?search_author=author_name&like_from=0&like_to=10
+  http://localhost:5000/search?search_author=Fredrick&at_from=01-01-2023&at_to=01-02-2023&like_from=0&like_to=5&reply_from=0&reply_to=5&seach_text=economic
   ```
 
 ## Contributing
